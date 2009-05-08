@@ -1,14 +1,16 @@
 
-%div{:style => "text-align: center; padding-top: 200px;"}
-- case
-  - when @days_until_camp > 0
-    %div{:style => "font-size: 120pt;"}NO
-    %h4= "only #{@days_until_camp} sleeps to go..."
-  - when @days_until_camp == 0
-    = "Railscamp starts today!"
-  - when @days_until_camp > -3
-    = "Railscamp is rockin'!"
-  - else
-    = "Railscamp is over :("
+%div{:style => "text-align: center; font-family: arial;text-align: center; padding-top: 200px;"}
+  - case
+    - when @days_until_camp > 0
+      %div{:style => "font-weight: bold; font-size: 120pt;"}NO
+      %h4= "only #{@days_until_camp} sleeps to go..."
+    - when @days_until_camp == 0
+      %div{:style => "font-weight: bold; font-size: 600pt;"}
+        = "Railscamp starts today!"
+    - when @days_until_camp > -3
+      %div{:style => "font-weight: bold; font-size: 60pt;"}
+        = "Railscamp is rockin'!"
+    - else
+      %div{:style => "font-weight: bold; font-size: 60pt;"}
+        = "Railscamp is over :("
 
-%h4= Time.now
