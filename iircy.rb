@@ -17,7 +17,7 @@ get '/' do
   case 
   when @days > 0
     @big = 'NO'
-    @small = "only #{@days} sleeps to go..."
+    @small = "only #{@days} sleep#{@days > 1 ? 's' : ''} to go..."
   when @days == 0
     @big = 'YES'
     @small = 'Railscamp starts today!'
