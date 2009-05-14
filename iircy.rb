@@ -28,7 +28,8 @@ get '/' do
     @big = 'NO'
     @small = 'Railscamp is over :('
   end
-  haml :index
+  haml :index, :options => {:format => :html5,
+                            :attr_wrapper => '"'}
 end
 
 get '/format=xml' do
@@ -50,7 +51,7 @@ __END__
 
 %html{:lang => "en"}
   %head
-    %meta{'http-equiv' => "Content-Type", :content => "text/html", :charset =>"utf-8"}
+    %meta{:charset =>"UTF-8"}
     %title Is it Railscamp Yet?
     %style{:type => "text/css", :media => "screen"}
       div {
