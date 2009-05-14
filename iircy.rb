@@ -49,7 +49,7 @@ __END__
 @@ layout
 !!!
 
-%html{:lang => "en"}
+%html{:lang => "en-au"}
   %head
     %meta{:charset =>"UTF-8"}
     %title Is it Railscamp Yet?
