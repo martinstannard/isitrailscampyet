@@ -48,27 +48,13 @@ __END__
 
 @@ layout
 !!!
-
 %html{:lang => "en-au"}
   %head
     %meta{:charset =>"UTF-8"}
     %title Is it Railscamp Yet?
     %style{:type => "text/css", :media => "screen"}
-      div {
-      text-align: center;
-      font-weight: bold;
-      font-family: helvetica,"helvetica neue", arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 220px 0 0 0;
-      }
-      h1 {
-      font-size: 160px;
-      padding: 0;
-      margin: 0;
-      }
-
+      div {font: 700 1em helvetica,"helvetica neue", arial, sans-serif; margin: 0; padding: 220px 0 0 0; text-align: center;}
+      h1 {font-size: 160px; padding: 0;margin: 0;}
   %body
-
     = yield
 
