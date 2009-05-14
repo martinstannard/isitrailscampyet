@@ -34,14 +34,40 @@ end
 get '/format=xml' do
   @days = days_until_camp
   builder do |xml|
-    xml.isitrailscampyet ((@days > 0 || @days < -4) ? "no" : "yes")
+    xml.isitrailscampyet((@days > 0 || @days < -4) ? "no" : "yes")
   end
 end
 
 __END__
   
 @@ index
-%div{:style => "text-align: center; font-weight: bold; font-family: arial;text-align: center; padding-top: 200px;"}
-  %div{:style => "font-size: 120pt;"}
-    = @big
-  %h4= @small
+%div
+  %h1= @big
+  %p= @small
+
+@@ layout
+!!!
+
+%html{:lang => "en"}
+  %head
+    %meta{'http-equiv' => "Content-Type", :content => "text/html", :charset =>"utf-8"}
+    %title Is it Railscamp Yet?
+    %style{:type => "text/css", :media => "screen"}
+      div {
+      text-align: center;
+      font-weight: bold;
+      font-family: helvetica,"helvetica neue", arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 220px 0 0 0;
+      }
+      h1 {
+      font-size: 160px;
+      padding: 0;
+      margin: 0;
+      }
+
+  %body
+
+    = yield
+
