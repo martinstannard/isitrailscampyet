@@ -57,4 +57,3 @@ __END__
       h1 {font-size: 160px; padding: 0;margin: 0;}
   %body
     = yield
-
