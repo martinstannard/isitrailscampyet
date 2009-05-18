@@ -29,7 +29,7 @@ get '/' do
     @small = 'Railscamp is over :('
   end
   @big = 'NO'
-  @small = 'Railscamp is over :('
+  @small = 'Railscamp is over :(<br>See you next time'
   haml :index, :options => {:format => :html5,
                             :attr_wrapper => '"'}
 end
