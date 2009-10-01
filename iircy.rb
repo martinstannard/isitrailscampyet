@@ -6,7 +6,7 @@ helpers do
 
   def days_until_camp
     now = Time.now.utc
-    camp_start = Time.utc(2009, 5, 15, 15, 0, 0)
+    camp_start = Time.utc(2009, 11, 20, 15, 0, 0)
     ((camp_start - now) / (3600 * 24)).to_i
   end
   
