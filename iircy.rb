@@ -55,5 +55,7 @@ __END__
     %style{:type => "text/css", :media => "screen"}
       div {font: 700 1em helvetica,"helvetica neue", arial, sans-serif; margin: 0; padding: 220px 0 0 0; text-align: center;}
       h1 {font-size: 160px; padding: 0;margin: 0;}
+      a:link, a:visited { color: #484848; }
+      a:hover, a:focus, a:active { color: #000; }
   %body
     = yield
