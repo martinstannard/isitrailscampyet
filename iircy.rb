@@ -6,18 +6,18 @@ helpers do
 
   def days_until_camp
     now = Time.now.utc
-    camp_start = Time.utc(2009, 11, 19, 17, 0, 0)
+    camp_start = Time.utc(2012, 06, 15, 17, 0, 0)
     ((camp_start - now) / (3600 * 24)).to_i
   end
-  
+
 end
 
 get '/' do
   @days = days_until_camp
-  case 
+  case
   when @days > 0
     @big = 'NO'
-    @small = "only #{@days} sleep#{@days > 1 ? 's' : ''} to go... better get a <a href=\"http://rails-camp.eventwax.com/rails-camp-6/register\">ticket!</a>"
+    @small = "only #{@days} sleep#{@days > 1 ? 's' : ''} to go... better get a <a href=\"http://railscamp11.eventbrite.com\">ticket!</a>"
   when @days == 0
     @big = 'YES'
     @small = 'Railscamp starts today!'
@@ -40,7 +40,7 @@ get '/format=xml' do
 end
 
 __END__
-  
+
 @@ index
 %div
   %h1= @big
